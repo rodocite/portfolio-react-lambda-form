@@ -12,6 +12,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 class EventPlanner extends Component {
   submit(refs) {
     const lambda = new AWS.Lambda()
+
     const {
       inputEmail: email,
       inputFname: fname,
@@ -40,13 +41,13 @@ class EventPlanner extends Component {
     return (
       <div>
         <label htmlFor="email">Email:</label>
-        <input id="email" ref="inputEmail" type="text" placeholder="First Name" />
+        <input id="email" ref="inputEmail" type="text" placeholder="name@example.com" />
         <label htmlFor="fname">First Name:</label>
-        <input id="fname" ref="inputFname" type="text" placeholder="First Name" />
+        <input id="fname" ref="inputFname" type="text" />
         <label htmlFor="lname">Last Name:</label>
-        <input id="lname" ref="inputLname" type="text" placeholder="First Name" />
+        <input id="lname" ref="inputLname" type="text" />
         <label htmlFor="event">Event:</label>
-        <input id="event" ref="inputEvent" type="text" placeholder="First Name" />
+        <input id="event" ref="inputEvent" type="text" placeholder="Party" />
         <button onClick={ () => this.submit(this.refs) }></button>
       </div>
     )
@@ -54,6 +55,6 @@ class EventPlanner extends Component {
 }
 
 render.render(
-    <EventPlanner />,
-    document.getElementById('react-entry')
-  );
+  <EventPlanner />,
+  document.getElementById('react-entry')
+)
