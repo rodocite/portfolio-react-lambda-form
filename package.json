@@ -1,0 +1,26 @@
+{
+  "name": "lambda-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lambda-form.js",
+  "scripts": {
+    "start": "webpack-dev-server -d --progress --colors --display-modules --port 3000",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.4.6",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.10.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
